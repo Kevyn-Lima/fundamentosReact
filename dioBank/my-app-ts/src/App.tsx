@@ -1,15 +1,11 @@
-import { Card } from './components/Card';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
 import { Layout } from './components/Layout';
+import { Login } from './components/login/Login';
+
 
 function App() {
   return (
     <Layout>
-      <Card
-      id={2}
-      paragraph='HTML'
-      details='TS HTML para frontend'/>
+      <Login/>
     </Layout>
   );
 }
