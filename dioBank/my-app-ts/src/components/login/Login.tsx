@@ -1,30 +1,24 @@
 import styled from 'styled-components';
+import { 
+    ChakraProvider,
+    Input, Center
+   } from '@chakra-ui/react'
+   
 
-const Box = styled.div`
-  background-color: orange
-`
 export const Login = () => {
     return(
     <>
-        <Box>
-        <h1> Faça o Login</h1>
-        </Box>
-        <label htmlFor='emailInput'>
-           E-mail
-        </label>
-
-        <input type='email' id='emailInput'/>
-
-        <label htmlFor='passwordInput'><br />
-            Senha
-        </label>
-
-        <input id='passwordInput' type='password'/>
-
-        <br />
-        <button>
-            Entrar
-        </button>
+        <ChakraProvider>
+            <Center h='100'> 
+                <h1> Faça o Login</h1>
+                <Input placeholder='Email' type='email'/>
+                <Input placeholder='Password' type='password'/>
+                <br /><br />
+                <button>
+                    Entrar
+                </button>
+            </Center>
+        </ChakraProvider>
     </>
     )
 }
