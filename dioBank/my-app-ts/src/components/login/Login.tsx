@@ -1,7 +1,8 @@
-import styled from 'styled-components';
 import { 
     ChakraProvider,
-    Input, Center
+    Input,
+    Box,
+    Center,Button
    } from '@chakra-ui/react'
    
 
@@ -9,15 +10,21 @@ export const Login = () => {
     return(
     <>
         <ChakraProvider>
-            <Center h='100'> 
-                <h1> Faça o Login</h1>
-                <Input placeholder='Email' type='email'/>
-                <Input placeholder='Password' type='password'/>
-                <br /><br />
-                <button>
-                    Entrar
-                </button>
-            </Center>
+            <Box minHeight='100vh' backgroundColor='#9413dc' padding='95px'>
+                <Box backgroundColor='#ffffff' borderRadius='25px' padding='15px'>
+                    <Center>
+                        <h1> Faça o Login</h1>
+                    </Center>
+                        <Input placeholder='Email' type='email' />
+                        <Input placeholder='Password' type='password'/>
+                        <br /><br />
+                    <Center>
+                        <Button colorScheme='teal' size='lg' marginTop='15px'>
+                            Entrar
+                        </Button>                    
+                    </Center>
+                </Box>
+            </Box>    
         </ChakraProvider>
     </>
     )
